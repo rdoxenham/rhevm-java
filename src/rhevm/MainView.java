@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class MainView 
 {
-	private static String this_version = "1.0";
+	private static String this_version = "1.1";
 	private static JTabbedPane tabbedPane;
 	private static JPanel	hostPanel;
 	private static JPanel	dcPanel;
