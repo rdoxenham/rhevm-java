@@ -24,10 +24,10 @@ public class VMManager
 	
 	public JTable getVMTable(String vmName)
 	{
-		String[] columnNames = {"Attribute",
-        "Value"};
+		String[] columnNames = {"Attribute", "Value"};
 		VirtualMachine tempVM = (VirtualMachine) VMArray.get(0);
-		Object[][] data = {
+		Object[][] data = 
+		{
 				{"VM Name", tempVM.getVMName()},
 				{"vCPU Cores", tempVM.getVMCores()},
 				{"VM Name", tempVM.getVMName()},

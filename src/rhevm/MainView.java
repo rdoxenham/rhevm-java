@@ -14,6 +14,7 @@ public class MainView
 	private static JPanel clusterPanel;
 	private static JScrollPane vmScroll;
 	public JTable vmTable;
+	public JLabel statusLabel = new JLabel();
 	
 	public JMenuBar createMenuBar() 
 	{
@@ -74,7 +75,6 @@ public class MainView
 		tabbedPane.addTab( "Virtual Machines", vmPanel );
 		
 		mainWindow.getContentPane().add(tabbedPane, BorderLayout.CENTER);
-		JLabel statusLabel = new JLabel("Status: OFFLINE");
 		mainWindow.getContentPane().add(statusLabel, BorderLayout.SOUTH);
         mainWindow.setVisible(true);
 	}
@@ -116,11 +116,17 @@ public class MainView
 		vmPanel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, vmScroll, vmRightHand);
 		vmPanel.setDividerLocation(200);
 	}
+	
+	public void setStatus(String status)
+	{
+		statusLabel.setText("Status: " + status);
+	}
 
 	public static void main(String[] args) 
 	{
 		MainView rhevm = new MainView();
 		rhevm.buildUI();
+		rhevm.setStatus("DISCONNECTED");
 	}
 
 }
