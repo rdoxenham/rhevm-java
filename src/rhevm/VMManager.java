@@ -29,6 +29,18 @@ public class VMManager
 		VirtualMachine tempVM = (VirtualMachine) VMArray.get(0);
 		Object[][] data = {
 				{"VM Name", tempVM.getVMName()},
+				{"vCPU Cores", tempVM.getVMCores()},
+				{"VM Name", tempVM.getVMName()},
+				{"vCPU Cores", tempVM.getVMCores()},
+				{"VM Name", tempVM.getVMName()},
+				{"vCPU Cores", tempVM.getVMCores()},
+				{"VM Name", tempVM.getVMName()},
+				{"vCPU Cores", tempVM.getVMCores()},
+				{"VM Name", tempVM.getVMName()},
+				{"vCPU Cores", tempVM.getVMCores()},
+				{"VM Name", tempVM.getVMName()},
+				{"vCPU Cores", tempVM.getVMCores()},
+				{"VM Name", tempVM.getVMName()},
 				{"vCPU Cores", tempVM.getVMCores()}
 		};
 		JTable vmTable = new JTable(data, columnNames);
