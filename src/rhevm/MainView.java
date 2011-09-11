@@ -99,15 +99,19 @@ public class MainView
 		vmTable = thisVM.getVMTable("hello");
 		
 		vmRightHand.add(vmTable);
-		JPanel vmBottomPanel = new JPanel(new FlowLayout());
-		JButton testButton = new JButton("Start VM");
-		vmBottomPanel.add(testButton);
-		JButton testButton2 = new JButton("Shutdown VM");
-		vmBottomPanel.add(testButton2);
-		JButton testButton3 = new JButton("Force Off");
-		vmBottomPanel.add(testButton3);
-		JButton testButton4 = new JButton("Delete VM");
-		vmBottomPanel.add(testButton4);
+		JPanel vmBottomPanel = new JPanel(new GridLayout(2, 0));
+		JButton startButton = new JButton("Start VM");
+		vmBottomPanel.add(startButton);
+		JButton shutdownButton = new JButton("Shutdown VM");
+		vmBottomPanel.add(shutdownButton);
+		JButton forceoffButton = new JButton("Force Off");
+		vmBottomPanel.add(forceoffButton);
+		JButton editButton = new JButton("Edit VM");
+		vmBottomPanel.add(editButton);
+		JButton migrateButton = new JButton("Migrate VM");
+		vmBottomPanel.add(migrateButton);
+		JButton deleteButton = new JButton("Delete VM");
+		vmBottomPanel.add(deleteButton);
 		vmRightHand.add(vmBottomPanel);
 		vmPanel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, vmScroll, vmRightHand);
 		vmPanel.setDividerLocation(200);
