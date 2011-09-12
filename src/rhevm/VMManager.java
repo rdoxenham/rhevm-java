@@ -17,8 +17,9 @@ public class VMManager
 	{
 		// TODO Empty VM Array
 		VirtualMachine vm1 = new VirtualMachine();
-		vm1.vmName = "froer.example.com";
+		vm1.vmName = "vm.example.com";
 		vm1.vmCores = 4;
+		vm1.vmStatus = "DOWN";
 		VMArray.add(vm1);
 	}
 	
@@ -47,5 +48,17 @@ public class VMManager
 		return vmTable;
 	}
 	
+	public String getVMStatus(String vmNameInput)
+	{
+		String thisStatus = "Unknown";
+		for (int i = 0; i < VMArray.size(); i++)
+		{
+			if (VMArray.get(i).vmName.equals(vmNameInput))
+			{
+				thisStatus = VMArray.get(i).vmStatus;
+			}
+		}
+		return thisStatus;
+	}
 	
 }
