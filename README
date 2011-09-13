@@ -1,4 +1,17 @@
 RHEV-M Java Implementation
 Rhys Oxenham <roxenham@redhat.com>
 
-### EMPTY README ###
+[About]
+
+This project was started as a hobby to code a new front-end for the
+Red Hat Enterprise Virtualisation Manager that doesn't rely on Windows
+Presentation Framework (.NET). This implementation is designed to have
+a very minimal subset of dependencies and will be lightweight, portable
+and easily updateable from the latest upstream code. 
+
+This is purely a work in progress and does not actually function at the
+time of writing this README. I will be making contributions to this in
+my spare time and would welcome any other developers that would be
+interested in taking part.
+
+NOTE: This is *not* a supported Red Hat product, it's a community-extension.
